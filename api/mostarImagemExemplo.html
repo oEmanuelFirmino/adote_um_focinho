@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pets</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            vertical-align: top;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Pets</h1>
+    <div id="pets-container"></div>
+
+    <script>
+        // Função para buscar e exibir os dados dos pets
+        function carregarPets() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', './list_pets.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const pets = JSON.parse(xhr.responseText);
+                    const container = document.getElementById('pets-container');
+                    container.innerHTML = ''; // Limpar o container
+
+                    pets.forEach(pet => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.innerHTML = `
+                            <h2>${pet.nome}</h2>
+                            <p>Idade: ${pet.idade}</p>
+                            <p>Personalidade: ${pet.personalidade}</p>
+                            <p>Porte: ${pet.porte}</p>
+                            <p>Raça: ${pet.raca}</p>
+                            <img src="data:image/jpeg;base64,${pet.imagem}" alt="${pet.nome}">
+                        `;
+                        container.appendChild(card);
+                    });
+                } else {
+                    console.error('Erro ao carregar dados');
+                }
+            };
+            xhr.send();
+        }
+
+        // Carregar os dados quando a página carregar
+        window.onload = carregarPets;
+    </script>
+</body>
+</html>
