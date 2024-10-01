@@ -44,14 +44,13 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-
-
 .main-c {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px; 
+  padding: 60px; 
   height: -webkit-fill-available;
+  gap:32px;
 }
 
 .hero-content {
@@ -98,7 +97,7 @@ a:hover {
   position: relative;
   z-index: 0;
   overflow-y: hidden;
-
+  margin: 0 32px;
 }
 
 .section-c {

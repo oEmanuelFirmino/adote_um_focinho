@@ -21,7 +21,7 @@
     <div id="header">
       <?php include '../components/form.php'; ?>
     </div>
-    <form id="customForm" enctype="multipart/form-data">
+    <form id="customForm" enctype="multipart/form-data" method="post" action="/adote_um_focinho/api/create_pet_controller.php">
       <?php
       $formType = 'animal';
       renderForm($formType);
@@ -33,4 +33,5 @@
     <?php include '../components/footer.php'; ?>
   </div>
 </body>
+
 </html>

@@ -55,7 +55,7 @@
         <a class="none-style" href="/adote_um_focinho/src/pages/contact.php">
           <div class="help-item">
             <img
-              src="./src/pages/contact.php"
+              src="./src/images/contact.png"
               alt="Contate-nos"
               class="help-img"
             />
@@ -63,7 +63,7 @@
             <p>Entre em contato conosco por aqui.</p>
           </div>
         </a>
-        <a class="none-style" href="">
+        <a class="none-style" href="" id="copyBtn">
           <div class="help-item">
             <img
               src="./src/images/share.png"
@@ -81,5 +81,16 @@
       <?php include './src/components/footer.php'; ?>
     </div>
     <script src="/adote_um_focinho/src/js/main.js"></script>
+    <script>
+           document.getElementById('copyBtn').addEventListener('click', function() {
+            const currentUrl = window.location.href;
+            
+            navigator.clipboard.writeText(currentUrl).then(function() {
+                alert("URL copiada com sucesso! Você já pode compartilhar e ajudar um focinho que precisa!");
+            }, function(err) {
+                console.error("Erro ao copiar a URL: ", err);
+            });
+        });
+    </script>
   </body>
 </html>
