@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/adote_um_focinho/reset.css" />
+  <link rel="stylesheet" href="/reset.css" />
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="./css/register.css" />
   <link rel="stylesheet" href="../css/footer.css" />
@@ -21,7 +21,7 @@
     <div id="header">
       <?php include '../components/form.php'; ?>
     </div>
-    <form id="customForm" enctype="multipart/form-data" method="post" action="/adote_um_focinho/api/create_pet_controller.php">
+    <form id="customForm" enctype="multipart/form-data" method="post" action="/api/create_pet_controller.php">
       <?php
       $formType = 'animal';
       renderForm($formType);

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="/adote_um_focinho/src/css/global.css" />
-    <link rel="stylesheet" href="/adote_um_focinho/src/css/main.css" />
-    <link rel="stylesheet" href="/adote_um_focinho/src/css/header.css" />
-    <link rel="stylesheet" href="/adote_um_focinho/src/css/footer.css" />
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/header.css" />
+    <link rel="stylesheet" href="/src/css/footer.css" />
     <title>Adote um Focinho</title>
   </head>
   <body>
@@ -33,7 +33,7 @@
 
       <section id="how-to-help" class="section">
         <h2>Como Ajudar</h2>
-        <a class="none-style" href="/adote_um_focinho/src/pages/adoption.php">
+        <a class="none-style" href="/src/pages/adoption.php">
           <div class="help-options">
             <div class="help-item">
               <img src="./src/images/dog.png" alt="Adote" class="help-img" />
@@ -41,10 +41,10 @@
               <p>Dê a um cachorro uma nova chance de vida ao adotá-lo.</p>
             </div>
           </a>
-          <a class="none-style" href="./src/pages/register.php">
+          <a class="none-style" href="/src/pages/register.php">
           <div class="help-item">
             <img
-              src="./src/images/register-dog.png"
+              src="/src/images/register-dog.png"
               alt="Cadastre um focinho"
               class="help-img"
             />
@@ -52,7 +52,7 @@
             <p>Dê um lar a um animalzinho que precisa.</p>
           </div>
         </a>
-        <a class="none-style" href="/adote_um_focinho/src/pages/contact.php">
+        <a class="none-style" href="/src/pages/contact.php">
           <div class="help-item">
             <img
               src="./src/images/contact.png"
@@ -80,7 +80,7 @@
     <div id="footer">
       <?php include './src/components/footer.php'; ?>
     </div>
-    <script src="/adote_um_focinho/src/js/main.js"></script>
+    <script src="/src/js/main.js"></script>
     <script>
            document.getElementById('copyBtn').addEventListener('click', function() {
             const currentUrl = window.location.href;

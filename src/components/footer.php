@@ -7,10 +7,9 @@
   <footer class="footer-container">
     <div class="footer-content">
       <p>&copy; 2024 Adote um Focinho. Todos os direitos reservados.</p>
+      <p>Desenvolvido por: Emanuel Firmino - Jefferson Felipe - Gabriel Leite</p>
       <ul class="footer-links">
-        <li><a href="/src/pages/privacy.html">Política de Privacidade</a></li>
-        <li><a href="/src/pages/terms.html">Termos de Serviço</a></li>
-        <li><a href="/src/pages/contact.html">Contato</a></li>
+        <li><a href="/src/pages/contact.php">Contato</a></li>
       </ul>
     </div>
   </footer>

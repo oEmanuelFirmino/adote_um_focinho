@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/adote_um_focinho/reset.css" />
+    <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="./css/adoption.css" />
     <link rel="stylesheet" href="../css/footer.css" />
@@ -19,7 +19,7 @@
         <script>
           function carregarPets() {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "/adote_um_focinho/api/list_pets.php", true);
+            xhr.open("GET", "/api/list_pets.php", true);
             xhr.onload = function () {
               if (xhr.status === 200) {
                 const pets = JSON.parse(xhr.responseText);

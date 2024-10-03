@@ -52,7 +52,9 @@
     padding: 8px 16px; 
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
+
 
 .links:hover {
     background-color: #34c9a7; 
@@ -80,5 +82,37 @@
 
     .links {
         padding: 6px 12px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 2520px) {
+
+    .header-container {
+        height: 120px;
+        padding: 0 80px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    #title {
+        font-size: 48px;
+    }
+
+    .link-list {
+        gap: 60px;
+        font-size: 20px;
+    }
+
+    .links {
+        padding: 12px 24px;
+        font-size: 1.5rem;
+    }
+
+    .links:hover {
+        transform: scale(1.1);
+    }
+
+    .links:active {
+        transform: scale(1.02);
     }
 }

@@ -98,10 +98,12 @@ a:hover {
   z-index: 0;
   overflow-y: hidden;
   margin: 0 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-c {
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 40px;
   background-color: #ffffff;
@@ -114,12 +116,6 @@ a:hover {
   color: #4a148c;
   margin: 0 0 20px;
   font-weight: 700;
-}
-
-.section p {
-  font-size: 1.2em;
-  color: #333;
-  line-height: 1.6;
 }
 
 .call-to-action {
@@ -163,4 +159,97 @@ a:hover {
   width: auto;
   height: 100px;
   margin-bottom: 15px;
+}
+
+
+#about-us {
+  max-width: 1005;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ .section p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+ }
+
+h3 {
+  font-size: 1.1em;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 2520px) {
+
+  #title {
+    font-size: 48px;
+  }
+
+  .main-c {
+    padding: 120px 0;
+    gap: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 6em;
+  }
+
+  .hero-content p {
+    font-size: 4em;
+  }
+
+  .section {
+    padding: 120px 60px;
+    margin: 0 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-c {
+    width: 100%;
+  }
+
+  #about-us {
+    max-width: 1005;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  #how-to-help {
+    max-width: 1005;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .help-options {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin:0;
+  }
+
+  .help-item {
+    width: 600px;
+    height: 500px;
+    max-width: 500px;
+    max-height: 400px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+  }
+
+  .help-img {
+    height: 300px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }

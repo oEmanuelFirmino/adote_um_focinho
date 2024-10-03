@@ -144,7 +144,34 @@ textarea:focus {
   border-color: #3e5b8d; 
 }
 
-button[type="submit"]:hover {
-  background-color: #34c9a7;
-}
+@media (min-width: 2520px) {
+  form {
+    max-width: 1200px; 
+    padding: 40px; 
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+  }
 
+  .form-field label {
+    font-size: 20px; 
+  }
+
+  .form-field input[type="text"],
+  .form-field input[type="number"],
+  .form-field input[type="file"],
+  .form-field input[type="email"],
+  .form-field select,
+  textarea {
+    padding: 16px; 
+    font-size: 18px; 
+    border-radius: 6px; 
+  }
+
+  button[type="submit"] {
+    padding: 18px; 
+    font-size: 20px; 
+  }
+
+  textarea {
+    min-height: 150px; 
+  }
+}

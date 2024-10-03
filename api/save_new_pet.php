@@ -19,7 +19,7 @@ function save_new_pet(string $nome, int $idade, string $personalidade,
   $res = mysqli_stmt_execute($prep);
   
   if ($res) {
-    header("Location: /adote_um_focinho/src/pages/adoption.php");
+    header("Location: /src/pages/adoption.php");
     exit();
   } else {
     echo "ERROR: " . mysqli_stmt_error($prep);
