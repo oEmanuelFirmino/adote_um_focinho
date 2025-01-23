@@ -28,6 +28,20 @@ switch ($uri) {
   case '/pets/list':
     header('Content-Type: application/json');
     echo json_encode($controller->listPets());
+  case '/register/pet':
+    $id = NULL;
+    $nome = $_POST['nome'];
+    $idade = $_POST['idade'];
+    $personalidade = $_POST['personalidade'];
+    $porte = $_POST['porte'];
+    $raca = $_POST['raca'];
+
+    $imagem = (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK)
+      ? file_get_contents($_FILES['imagem']['tmp_name'])
+      : '';
+      
+    $pet = new Pet($id, $nome, $idade, $personalidade, $porte, $raca, $imagem);
+    $controller->createPet($pet);
     exit;
   default:
     http_response_code(404);

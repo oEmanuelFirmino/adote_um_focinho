@@ -21,7 +21,7 @@
     <div id="header">
       <?php include '../components/form.php'; ?>
     </div>
-    <form id="customForm" enctype="multipart/form-data" method="post" action="/api/create_pet_controller.php">
+    <form id="customForm" enctype="multipart/form-data" method="post" action="/adote_um_focinho/register/pet">
       <?php
       $formType = 'animal';
       renderForm($formType);
@@ -29,6 +29,7 @@
       <button type="submit">Enviar</button>
     </form>
   </main>
+  <script src="../js/register.js"></script>
   <div id="footer">
     <?php include '../components/footer.php'; ?>
   </div>

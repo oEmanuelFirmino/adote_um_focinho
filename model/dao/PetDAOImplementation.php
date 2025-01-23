@@ -49,7 +49,7 @@ class PetDAOImplementation implements PetDAO
 
     $stmt = $this->connection->prepare($sql);
 
-    $stmt->bind_param("siisss", $nome, $idade, $personalidade, $porte, $raca, $imagem);
+    $stmt->bind_param("sissss", $nome, $idade, $personalidade, $porte, $raca, $imagem);
 
     $stmt->execute();
 

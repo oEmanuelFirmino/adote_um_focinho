@@ -31,6 +31,9 @@ class PetController
       throw new Exception("Pet não pode ser nulo");
     }
 
+    if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] > 0) {
+      throw new Exception("Erro ao enviar a imagem");
+    }
     try {
       $this->petDAO->insert(
         $pet->getNome(),
@@ -41,7 +44,7 @@ class PetController
         $pet->getImagem()
       );
 
-      header("Location: /adote_um_focinho/src/view/pages/adoption.php");
+      header("Location: /adote_um_focinho/view/src/pages/adoption.php");
       exit();
     } catch (Exception $e) {
       die("Erro ao criar pet: " . $e->getMessage());
@@ -87,7 +90,7 @@ class PetController
       exit;
     }
   }
-  
+
   public function updatePet($pet)
   {
     if ($_SERVER['REQUEST_METHOD'] !== 'PUT') {
