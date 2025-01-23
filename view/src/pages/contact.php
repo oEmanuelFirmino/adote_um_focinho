@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header('Location: /adote_um_focinho/login');
+    exit;
+}
+
+echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']['nome']) . "!";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

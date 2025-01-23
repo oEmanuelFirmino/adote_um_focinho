@@ -1,10 +1,21 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+  header('Location: /adote_um_focinho/login');
+  exit;
+}
+
+echo "Bem-vindo, " . htmlspecialchars($_SESSION['usuario']['nome']) . "!";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="/adote_um_focinho/reset.css" />
   <link rel="stylesheet" href="/adote_um_focinho/view/src/css/global.css" />
   <link rel="stylesheet" href="/adote_um_focinho/view/src/css/main.css" />
@@ -15,7 +26,7 @@
 
 <body>
   <div id="header">
-    <?php include '../components/header.php'; ?>
+    <?php include __DIR__ . '/../components/header.php'; ?>
   </div>
   <main class="main-c">
     <section id="about-us" class="section">
@@ -123,7 +134,7 @@
     </section>
   </main>
   <div id="footer">
-    <?php include '../components/footer.php'; ?>
+    <?php include '/../components/footer.php'; ?>
   </div>
   <script src="./view/src/js/main.js"></script>
   <script>

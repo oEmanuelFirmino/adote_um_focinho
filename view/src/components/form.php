@@ -1,8 +1,9 @@
 <?php
-function renderField($label, $type, $name, $options = null) {
+function renderField($label, $type, $name, $options = null)
+{
     echo '<div class="form-field">';
     echo '<label for="' . $name . '">' . $label . '</label>';
-    
+
     if ($type === 'select') {
         echo '<select name="' . $name . '" id="' . $name . '">';
         foreach ($options as $option) {
@@ -14,11 +15,12 @@ function renderField($label, $type, $name, $options = null) {
     } else {
         echo '<input type="' . $type . '" name="' . $name . '" id="' . $name . '" required>';
     }
-    
+
     echo '</div>';
 }
 
-function renderForm($formType) {
+function renderForm($formType)
+{
     if ($formType === 'animal') {
         $fields = [
             ['label' => 'Imagem', 'type' => 'file', 'name' => 'imagem'],
@@ -33,6 +35,10 @@ function renderForm($formType) {
             ['label' => 'Nome', 'type' => 'text', 'name' => 'nome'],
             ['label' => 'Email', 'type' => 'email', 'name' => 'email'],
             ['label' => 'Mensagem', 'type' => 'textarea', 'name' => 'mensagem']
+        ];
+    } elseif ($formType === 'login') {
+        $fields = [
+            ['label' => 'Nome', 'type' => 'text', 'name' => 'nome']
         ];
     }
 
