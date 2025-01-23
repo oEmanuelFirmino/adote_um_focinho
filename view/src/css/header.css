@@ -1,0 +1,148 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 0 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.header-container:hover {
+  background: linear-gradient(135deg, #ffffff, #e6e6e6);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4a148c;
+  transition: color 0.3s ease;
+  text-align: center;
+  flex: 1 1 100%;
+  margin: 0;
+}
+
+#title:hover {
+  color: #34c9a7;
+}
+
+.link-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.links {
+  text-decoration: none;
+  color: #4a148c;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.links:hover {
+  background-color: #34c9a7;
+  color: #ffffff;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.links:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    align-items: flex-start;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  #title {
+    font-size: 22px;
+    text-align: left;
+    flex: 1 1 auto;
+  }
+
+  .link-list {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .links {
+    padding: 6px 12px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  #title {
+    font-size: 20px;
+  }
+
+  .link-list {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .links {
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 2520px) {
+  .header-container {
+    height: 120px;
+    padding: 0 80px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  #title {
+    font-size: 48px;
+  }
+
+  .link-list {
+    gap: 60px;
+    font-size: 20px;
+  }
+
+  .links {
+    padding: 12px 24px;
+    font-size: 1.5rem;
+  }
+
+  .links:hover {
+    transform: scale(1.1);
+  }
+
+  .links:active {
+    transform: scale(1.02);
+  }
+}
